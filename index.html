@@ -15,7 +15,7 @@
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
   <!-- Nuestros estilos -->
-  <link rel="stylesheet" href="css/styles.css?v=15" />
+  <link rel="stylesheet" href="css/styles.css?v=16" />
 </head>
 <body>
 
@@ -193,6 +193,7 @@
     <p data-i18n="newsletter.text">Suscríbete y recibe noticias, promociones y contenido exclusivo.</p>
     <form class="newsletter-form" id="newsletterForm">
       <input type="email" data-i18n-placeholder="newsletter.placeholder" placeholder="Tu correo electrónico" required data-i18n-aria-label="aria.newsletterEmail" aria-label="Correo electrónico" />
+      <input type="text" name="website" id="newsletterHoneypot" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <button type="submit" class="btn btn-outline btn-outline-light" data-i18n="newsletter.button">Suscribirme</button>
     </form>
     <p id="newsletterFeedback" class="form-feedback" role="status" aria-live="polite"></p>
@@ -241,6 +242,7 @@
           <label for="mensaje" data-i18n="form.mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
         </div>
+        <input type="text" name="website" id="contactHoneypot" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button type="submit" class="btn btn-solid" data-i18n="form.submit">Enviar mensaje</button>
         <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
       </form>
@@ -274,6 +276,6 @@
   <!-- EmailJS (correo automático de bienvenida al suscribirse) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Nuestro script -->
-  <script src="js/script.js?v=14"></script>
+  <script src="js/script.js?v=15"></script>
 </body>
 </html>

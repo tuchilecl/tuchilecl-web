@@ -1284,6 +1284,16 @@ h1, h2, h3 {
   gap: 0.4rem;
 }
 
+/* Campo trampa anti-spam: invisible para personas, visible para bots */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
 .form-group label {
   font-weight: 500;
   font-size: 0.85rem;

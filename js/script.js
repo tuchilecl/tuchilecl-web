@@ -156,6 +156,15 @@ if (contactForm) {
     const nombre = document.getElementById('nombre').value.trim();
     const email = document.getElementById('email').value.trim();
     const mensaje = document.getElementById('mensaje').value.trim();
+    const honeypot = document.getElementById('contactHoneypot').value;
+
+    if (honeypot) {
+      // Bot detectado: fingimos éxito y no enviamos nada.
+      formFeedback.textContent = translate('feedback.formSuccess').replace('{name}', nombre);
+      formFeedback.className = 'form-feedback success';
+      contactForm.reset();
+      return;
+    }
 
     if (!nombre || !email || !mensaje) {
       formFeedback.textContent = translate('feedback.formIncomplete');
@@ -207,6 +216,15 @@ if (newsletterForm) {
 
     const emailInput = newsletterForm.querySelector('input[type="email"]');
     const email = emailInput.value.trim();
+    const honeypot = document.getElementById('newsletterHoneypot').value;
+
+    if (honeypot) {
+      // Bot detectado: fingimos éxito y no enviamos nada.
+      newsletterFeedback.textContent = translate('feedback.newsletterSuccess');
+      newsletterFeedback.className = 'form-feedback success';
+      newsletterForm.reset();
+      return;
+    }
 
     if (!email) {
       newsletterFeedback.textContent = translate('feedback.newsletterInvalid');
