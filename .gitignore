@@ -1,0 +1,6 @@
+# Material audiovisual sin procesar, no usado por el sitio (muy pesado para git)
+images/CAVERNAS DE MARMOL/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db

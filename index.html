@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUCHILECL | Inicio</title>
+  <meta name="description" content="Página web de TUCHILECL: servicios, información y contacto." />
+
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Nuestros estilos -->
+  <link rel="stylesheet" href="css/styles.css?v=15" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVEGACIÓN =====-->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="#inicio" class="logo">
+        <img src="images/logo.jpeg" alt="Logo TUCHILECL" class="logo-img" />
+        <span class="logo-text"><span class="logo-red">TU</span><span class="logo-blue">CHILE</span><span class="logo-adaptive">CL</span></span>
+      </a>
+
+      <div class="navbar-controls">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio" data-i18n="nav.inicio">Inicio</a></li>
+          <li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+          <li><a href="#testimonios" data-i18n="nav.testimonios">Testimonios</a></li>
+          <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Selector de idioma -->
+        <div class="lang-switcher" id="langSwitcher">
+          <button type="button" class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <span aria-hidden="true">🌐</span>
+            <span id="langCurrentLabel">ES</span>
+            <span class="lang-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="menu">
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="es">Español</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="en">English</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="pt">Português</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="de">Deutsch</button></li>
+          </ul>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" data-i18n-aria-label="aria.openMenu" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO / PORTADA =====-->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Bienvenido a</p>
+      <h1><span data-i18n="hero.titleLine1">Viajes Chile</span><br />Patagonia & San Pedro de Atacama</h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">Tu guía de confianza para explorar los destinos más extraordinarios de Chile. Excursiones guiadas, logística integral y experiencias a medida en la Patagonia y San Pedro de Atacama.</p>
+      <div class="hero-actions">
+        <a href="#destinos" class="btn btn-outline" data-i18n="hero.btnVer">Ver Destinos</a>
+        <a href="#contacto" class="btn btn-solid" data-i18n="hero.btnCotizacion">Solicita una cotización</a>
+      </div>
+    </div>
+    <a href="#destinos" class="scroll-cue" data-i18n-aria-label="aria.scrollDown" aria-label="Bajar a la siguiente sección">↓</a>
+  </section>
+
+  <!-- ===== DESTINOS (TARJETAS) ===== -->
+  <section id="destinos" class="section destinos-section">
+    <div class="destinos-header">
+      <p class="eyebrow eyebrow-dark destinos-eyebrow" data-i18n="destinos.eyebrow">Expediciones</p>
+      <h2 class="section-title section-title--left">
+        <span data-i18n="destinos.headingPre">Dos destinos, un mismo</span> <em data-i18n="destinos.headingEmphasis">Chile</em>.
+      </h2>
+    </div>
+
+    <div class="destinos-grid">
+      <!-- Patagonia -->
+      <article class="destino-card" id="patagonia">
+        <div class="destino-media">
+          <span class="destino-badge">Patagonia</span>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/patagonia/patagonia-1.jpeg" alt="Patagonia 1" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/patagonia-2.jpeg" alt="Patagonia 2" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/patagonia-3.jpeg" alt="Patagonia 3" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/patagonia-4.jpeg" alt="Patagonia 4" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="destino-content">
+          <p class="destino-location">📍 <span data-i18n="patagonia.location">Región de Aysén, Chile</span></p>
+          <h3>Patagonia</h3>
+          <p class="destino-description" data-i18n="patagonia.description">Adéntrate en la Patagonia chilena: glaciares milenarios, lagos color turquesa y las emblemáticas Capillas de Mármol te esperan en uno de los últimos rincones salvajes del planeta.</p>
+          <div class="destino-actions">
+            <a class="btn btn-outline-dark" href="patagonia.html" data-i18n="destinos.btnInfo">Más información</a>
+            <a class="btn btn-solid" href="https://wa.me/56998341538?text=Hola%2C%20quiero%20consultar%20fechas%20disponibles%20para%20el%20tour%20a%20Patagonia" target="_blank" rel="noopener noreferrer" data-i18n="destinos.btnFechas">Consultar fechas</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- San Pedro de Atacama -->
+      <article class="destino-card" id="san-pedro-de-atacama">
+        <div class="destino-media">
+          <span class="destino-badge">San Pedro De Atacama</span>
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/san-pedro-1.jpeg" alt="San Pedro de Atacama 1" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/san-pedro-2.jpeg" alt="San Pedro de Atacama 2" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/san-pedro-3.jpeg" alt="San Pedro de Atacama 3" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/san-pedro-4.jpeg" alt="San Pedro de Atacama 4" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="destino-content">
+          <p class="destino-location">📍 <span data-i18n="sanpedro.location">Desierto de Atacama, Chile</span></p>
+          <h3>San Pedro De Atacama</h3>
+          <p class="destino-description" data-i18n="sanpedro.description">Explora el desierto más árido del mundo: salares infinitos, géiseres al amanecer y cielos estrellados únicos convierten a San Pedro de Atacama en un destino inolvidable.</p>
+          <div class="destino-actions">
+            <a class="btn btn-outline-dark" href="san-pedro-de-atacama.html" data-i18n="destinos.btnInfo">Más información</a>
+            <a class="btn btn-solid" href="https://wa.me/56998341538?text=Hola%2C%20quiero%20consultar%20fechas%20disponibles%20para%20el%20tour%20a%20San%20Pedro%20de%20Atacama" target="_blank" rel="noopener noreferrer" data-i18n="destinos.btnFechas">Consultar fechas</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS =====
+       Tarjetas con imagen y texto, estilo "postales" de destino. -->
+  <section id="servicios" class="section section-alt">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="servicios.eyebrow">Qué ofrecemos</p>
+    <h2 class="section-title" data-i18n="servicios.title">Nuestros Servicios</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-media"><img src="images/servicios/guia-turistica.jpeg" alt="Guía Turística" /></div>
+        <div class="card-inner">
+          <h3 data-i18n="servicios.card1.title">Guía Turística</h3>
+          <p data-i18n="servicios.card1.text">Descubre los principales puntos de interés turístico acompañado de una guía entretenida y cercana. Conoce la historia, cultura y curiosidades de cada lugar, mientras puedes realizar preguntas y disfrutar de una experiencia dinámica.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media"><img src="images/servicios/servicio-fotografia.jpeg" alt="Servicio de Fotografía" /></div>
+        <div class="card-inner">
+          <h3 data-i18n="servicios.card2.title">Servicio de Fotografía</h3>
+          <p data-i18n="servicios.card2.text">Captura los mejores momentos de tu recorrido en los diferentes puntos turísticos visitados durante la guía. Disfruta de fotografías para conservar y compartir tus recuerdos de la experiencia. Servicio adicional con costo extra.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-media"><img src="images/servicios/planificacion-rutas.jpeg" alt="Planificación de Rutas" /></div>
+        <div class="card-inner">
+          <h3 data-i18n="servicios.card3.title">Planificación de Rutas</h3>
+          <p data-i18n="servicios.card3.text">Diseña tu recorrido ideal con orientación personalizada. Te ayudamos a planificar rutas, seleccionar puntos turísticos y organizar tu viaje, recomendándote lugares que puedes conocer, visitar y opciones donde puedes alojarte según tu recorrido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section id="testimonios" class="section">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="testimonios.eyebrow">Testimonios</p>
+    <h2 class="section-title" data-i18n="testimonios.title">Lo que dicen nuestros clientes</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p data-i18n="testimonios.t1">"Agradecidos por toda la gestión. Fue una tranquilidad tener todo listo desde nuestra llegada. Nos vamos con el corazón lleno y recuerdos inolvidables."</p>
+        <span class="testimonial-author" data-i18n="testimonios.t1author">— Viviana (España)</span>
+      </div>
+      <div class="testimonial">
+        <p data-i18n="testimonios.t2">"¡Una experiencia increíble desde Brasil! Fue una gran tranquilidad tener todo organizado desde nuestra llegada a San Pedro. Vivimos días inolvidables disfrutando de paisajes impresionantes y una atención de primer nivel. ¡Nos vamos muy agradecidos!"</p>
+        <span class="testimonial-author" data-i18n="testimonios.author">— Thiago y Beatriz (Porto Alegre, Brasil)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER / CTA OSCURO =====
+       Franja oscura de ancho completo, como el bloque de newsletter de sitios de turismo. -->
+  <section class="newsletter">
+    <h2 data-i18n="newsletter.title">Mantente al tanto de nuestras novedades</h2>
+    <p data-i18n="newsletter.text">Suscríbete y recibe noticias, promociones y contenido exclusivo.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" data-i18n-placeholder="newsletter.placeholder" placeholder="Tu correo electrónico" required data-i18n-aria-label="aria.newsletterEmail" aria-label="Correo electrónico" />
+      <button type="submit" class="btn btn-outline btn-outline-light" data-i18n="newsletter.button">Suscribirme</button>
+    </form>
+    <p id="newsletterFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="section section-alt">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="contacto.eyebrow">Hablemos</p>
+    <h2 class="section-title" data-i18n="contacto.title">Contáctanos</h2>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">📧</span>
+          <div>
+            <h3 data-i18n="contacto.emailLabel">Correo</h3>
+            <a href="mailto:tuchilecl@gmail.com">tuchilecl@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">📞</span>
+          <div>
+            <h3 data-i18n="contacto.phoneLabel">Teléfono</h3>
+            <a href="tel:+56998341538">+56 9 9834 1538</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon" aria-hidden="true">📷</span>
+          <div>
+            <h3 data-i18n="contacto.instagramLabel">Instagram</h3>
+            <a href="https://instagram.com/tu.chile.cl" target="_blank" rel="noopener noreferrer">@tu.chile.cl</a>
+          </div>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="nombre" data-i18n="form.nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email" data-i18n="form.email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="mensaje" data-i18n="form.mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid" data-i18n="form.submit">Enviar mensaje</button>
+        <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> TUCHILECL. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a
+    href="https://wa.me/56998341538?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tours%20de%20TUCHILECL"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-i18n-aria-label="aria.whatsapp"
+    aria-label="Chatea con nosotros por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.48L4 29l7.72-1.87A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.818c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.58 1.11 1.13-4.46-.25-.4A9.77 9.77 0 0 1 5.18 15c0-5.42 4.4-9.818 10.824-9.818 5.98 0 10.82 4.4 10.82 9.818 0 5.42-4.84 9.818-10.82 9.818Zm5.6-7.35c-.31-.15-1.82-.9-2.1-1-.28-.1-.49-.15-.69.15-.2.3-.79 1-.97 1.2-.18.2-.36.23-.67.08-.31-.15-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.12-.18-.3-.02-.47.13-.62.14-.14.31-.36.46-.54.15-.18.2-.3.31-.5.1-.2.05-.38-.02-.53-.08-.15-.69-1.67-.95-2.28-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.15 3.28 5.21 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.82-.74 2.08-1.46.26-.71.26-1.32.18-1.45-.08-.13-.28-.2-.59-.35Z"/>
+    </svg>
+  </a>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="back-to-top" data-i18n-aria-label="aria.backToTop" aria-label="Volver arriba">↑</button>
+
+  <!-- Sistema de idiomas (debe cargar antes que script.js) -->
+  <script src="js/i18n.js?v=19"></script>
+  <!-- EmailJS (correo automático de bienvenida al suscribirse) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Nuestro script -->
+  <script src="js/script.js?v=14"></script>
+</body>
+</html>

@@ -1,0 +1,1499 @@
+/* =========================================================================
+   ESTILO INSPIRADO EN SITIOS EDITORIALES DE TURISMO/NATURALEZA
+   (hero cinematográfico, navegación transparente, tipografía serif + sans,
+   fotografía a pantalla completa, mucho espacio en blanco)
+
+   IMPORTANTE SOBRE LAS IMÁGENES:
+   Como este proyecto no incluye fotos reales, todas las "fotos" del diseño
+   (hero, tarjetas destacadas, servicios, sección "Nosotros") están hechas
+   con degradados de CSS que imitan tonos de fotografía de naturaleza.
+   Búscalas en la sección 3 (".photo-1" a ".photo-6") y reemplaza el
+   "background" por algo como:
+
+     background-image: url('../images/tu-foto.jpg');
+     background-size: cover;
+     background-position: center;
+
+   ========================================================================= */
+
+/* =========================================
+   1. VARIABLES Y RESET GENERAL
+   ========================================= */
+:root {
+  /* Paleta inspirada en paisajes árticos: azul profundo, blanco cálido,
+     acentos helados y un tono arena para calidez */
+  --color-ink: #0e2230;          /* azul marino muy oscuro, casi negro */
+  --color-ink-soft: #16324459;
+  --color-cream: #f7f5f0;        /* blanco cálido de fondo */
+  --color-white: #ffffff;
+  --color-ice: #8fb3c2;          /* azul hielo, acento principal */
+  --color-ice-dark: #4f7a8c;
+  --color-sand: #cbb28a;         /* acento cálido secundario */
+  --color-gray: #5c6670;
+
+  --font-display: 'Fraunces', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  --max-width: 1180px;
+  --transition: 0.35s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  line-height: 1.7;
+  background-color: var(--color-cream);
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: 0.8rem;
+}
+
+.eyebrow-dark {
+  color: var(--color-ice-dark);
+}
+
+/* =========================================
+   2. HEADER Y NAVEGACIÓN
+   Transparente sobre el hero; al hacer scroll, script.js añade
+   la clase ".scrolled" para volverla sólida y legible.
+   ========================================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+}
+
+.header.scrolled {
+  background: rgba(247, 245, 240, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 14px rgba(14, 34, 48, 0.08);
+}
+
+.navbar {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 1.5rem;
+  transition: padding var(--transition);
+}
+
+.header.scrolled .navbar {
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  transition: color var(--transition);
+}
+
+.header.scrolled .logo {
+  color: var(--color-ink);
+}
+
+.logo-img {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  white-space: nowrap;
+}
+
+.logo-red {
+  color: #D52B1E;
+}
+
+.logo-blue {
+  color: #0039A6;
+}
+
+.logo-adaptive {
+  color: inherit;
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  transition: color var(--transition), opacity var(--transition);
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--color-sand);
+}
+
+.header.scrolled .nav-links a {
+  color: var(--color-ink);
+}
+
+.header.scrolled .nav-links a:hover {
+  color: var(--color-ice-dark);
+}
+
+.lang-switcher {
+  position: relative;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.header.scrolled .lang-toggle {
+  color: var(--color-ink);
+  border-color: rgba(14, 34, 48, 0.3);
+}
+
+.header.scrolled .lang-toggle:hover {
+  background: rgba(14, 34, 48, 0.06);
+}
+
+.lang-caret {
+  font-size: 0.7rem;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  min-width: 170px;
+  background: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(14, 34, 48, 0.2);
+  padding: 0.4rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  z-index: 200;
+}
+
+.lang-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+}
+
+.lang-option:hover {
+  background: var(--color-cream);
+}
+
+.lang-option.active {
+  color: var(--color-ice-dark);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: background var(--transition);
+}
+
+.header.scrolled .menu-toggle span {
+  background: var(--color-ink);
+}
+
+/* =========================================
+   3. "FOTOGRAFÍAS" (degradados de reemplazo) Y HERO
+   ========================================= */
+
+/* Cada .photo-N es un degradado distinto que simula fotografía de
+   naturaleza / paisaje. Sustituye el "background" por tu propia
+   imagen cuando la tengas (ver nota al inicio del archivo). */
+.photo-1 { background: linear-gradient(160deg, #0e2230 0%, #2c5064 45%, #8fb3c2 100%); }
+.photo-2 { background: linear-gradient(160deg, #1a3a4a 0%, #4f7a8c 60%, #cfe3e8 100%); }
+.photo-3 { background: linear-gradient(160deg, #16324a 0%, #6d8f9c 55%, #d8cdb8 100%); }
+.photo-4 {
+  background-image: url("../images/mariajose-guia.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.photo-5 { background: linear-gradient(160deg, #123043 0%, #3f7185 60%, #cbb28a 100%); }
+.photo-6 { background: linear-gradient(160deg, #0e2230 0%, #355a6b 50%, #93b6a9 100%); }
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-image: url("../images/hero-capillas-marmol.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,34,48,0.55) 0%, rgba(14,34,48,0.25) 45%, rgba(14,34,48,0.6) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 0 1.5rem;
+  color: var(--color-white);
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.92;
+  max-width: 520px;
+  margin: 0 auto 2.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  animation: bounce 2.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+/* =========================================
+   4. BOTONES
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: 2px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-white);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.btn-solid {
+  background: var(--color-ice-dark);
+  color: var(--color-white);
+}
+
+.btn-solid:hover {
+  background: var(--color-ink);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  border-color: rgba(255,255,255,0.6);
+  color: var(--color-white);
+}
+
+.btn-outline-light:hover {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.btn-outline-dark {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  background: transparent;
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+/* =========================================
+   5. DESTINOS (TARJETAS CON CARRUSEL)
+   ========================================= */
+.destinos-section {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+}
+
+.destinos-header {
+  max-width: 640px;
+  margin-bottom: 3rem;
+}
+
+.destinos-eyebrow {
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.destinos-eyebrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 1.1rem;
+  height: 1px;
+  background: var(--color-ice-dark);
+}
+
+.destinos-header .section-title em {
+  font-style: italic;
+  color: var(--color-ice-dark);
+}
+
+.destinos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+}
+
+.destino-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(14, 34, 48, 0.12);
+  transition: transform var(--transition);
+}
+
+.destino-card:hover {
+  transform: translateY(-4px);
+}
+
+.destino-media {
+  position: relative;
+}
+
+.destino-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 5;
+  background: var(--color-ink);
+  color: var(--color-white);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.destino-content {
+  padding: 1.8rem;
+}
+
+.destino-location {
+  font-size: 0.82rem;
+  color: var(--color-gray);
+  margin-bottom: 0.5rem;
+}
+
+.destino-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.destino-description {
+  color: var(--color-gray);
+  margin-bottom: 1.6rem;
+}
+
+.destino-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-ink);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 300px;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: var(--color-ink);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(14, 34, 48, 0.55);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.carousel-btn:hover {
+  background: rgba(14, 34, 48, 0.85);
+}
+
+.carousel-btn--prev {
+  left: 1rem;
+}
+
+.carousel-btn--next {
+  right: 1rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.carousel-dot.active {
+  background: var(--color-white);
+  transform: scale(1.2);
+}
+
+/* =========================================
+   5c. PÁGINA DE DESTINO INDIVIDUAL
+   (patagonia.html: hero, detalle, mapa, galería)
+   ========================================= */
+.destino-hero {
+  position: relative;
+  min-height: 60vh;
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.destino-hero-media,
+.destino-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destino-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,34,48,0.3) 0%, rgba(14,34,48,0.8) 100%);
+}
+
+.destino-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem clamp(1.5rem, 5vw, 3rem);
+  color: var(--color-white);
+}
+
+.destino-back {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  opacity: 0.85;
+  transition: opacity var(--transition);
+}
+
+.destino-back:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.destino-hero-content h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.destino-detail-intro {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.destino-detail-intro p:not(.eyebrow) {
+  color: var(--color-gray);
+  margin-top: 1rem;
+}
+
+.destino-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.destino-info-card {
+  background: var(--color-cream);
+  border: 1px solid rgba(14, 34, 48, 0.08);
+  border-radius: 10px;
+  padding: 1.6rem;
+}
+
+.destino-info-icon {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.destino-info-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.destino-info-card p {
+  color: var(--color-gray);
+  font-size: 0.92rem;
+}
+
+.destino-map {
+  max-width: var(--max-width);
+  margin: 2.5rem auto 0;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(14, 34, 48, 0.12);
+}
+
+.destino-map iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =========================================
+   5c-bis. SELECTOR RÁPIDO DE TOURS (Puerto Tranquilo / Puerto Sánchez)
+   ========================================= */
+.tours-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem 0;
+}
+
+.tours-nav-btn {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.4rem 1.6rem;
+  background: var(--color-cream);
+  border: 1px solid rgba(14, 34, 48, 0.1);
+  border-radius: 14px;
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition), background var(--transition);
+}
+
+.tours-nav-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(14, 34, 48, 0.15);
+  border-color: var(--color-ice-dark);
+  background: var(--color-white);
+}
+
+.tours-nav-icon {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 10px rgba(14, 34, 48, 0.08);
+  transition: transform var(--transition);
+}
+
+.tours-nav-btn:hover .tours-nav-icon {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+.tours-nav-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tours-nav-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+}
+
+.tours-nav-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  margin-top: 0.15rem;
+}
+
+.tours-nav-arrow {
+  font-size: 1.2rem;
+  color: var(--color-ice-dark);
+  animation: tours-nav-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes tours-nav-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tours-nav-arrow {
+    animation: none;
+  }
+}
+
+/* =========================================
+   5d. TOURS DETALLADOS (5 RUTAS, patagonia/san-pedro-de-atacama.html)
+   ========================================= */
+.tours-section {
+  scroll-margin-top: 90px;
+}
+
+.tours-section .section-title {
+  margin-bottom: 4rem;
+}
+
+.tours-list {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.tour-route {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.tour-route:nth-child(even) .tour-route-media {
+  order: 2;
+}
+
+.tour-route:nth-child(even) .tour-route-text {
+  order: 1;
+}
+
+.tour-route-media .carousel {
+  box-shadow: 0 14px 34px rgba(14, 34, 48, 0.15);
+}
+
+.tour-route-media .carousel-slide {
+  height: 380px;
+}
+
+.tour-media-placeholder {
+  height: 380px;
+  border: 2px dashed rgba(14, 34, 48, 0.25);
+  border-radius: 10px;
+  background: rgba(14, 34, 48, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: rgba(14, 34, 48, 0.4);
+}
+
+.tour-media-placeholder span {
+  font-size: 2.4rem;
+}
+
+.tour-media-placeholder p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Foto única (tours sin galería, p. ej. kayak) — mismo tamaño y marco que el carrusel */
+.tour-media-photo {
+  height: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(14, 34, 48, 0.15);
+}
+
+.tour-media-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Efecto "Ken Burns": zoom lento y continuo sobre las fotos de cada tour */
+.tour-route-media .carousel-slide img,
+.tour-media-photo img {
+  animation: tour-ken-burns 16s ease-in-out infinite alternate;
+}
+
+@keyframes tour-ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.09);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-route-media .carousel-slide img,
+  .tour-media-photo img {
+    animation: none;
+  }
+}
+
+.tour-route-text h3 {
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  margin: 0.4rem 0 1rem;
+}
+
+.tour-route-text > p {
+  color: var(--color-gray);
+  margin-bottom: 1.4rem;
+}
+
+.tour-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.tour-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.94rem;
+  color: var(--color-ink);
+}
+
+.tour-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-ice-dark);
+}
+
+.tour-route-text p.tour-altitude {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--color-gray);
+  margin: -0.4rem 0 0.4rem;
+}
+
+.tour-route-text p.tour-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-ice-dark);
+  margin: -0.4rem 0 1rem;
+}
+
+.tour-route-text p.tour-altitude + p.tour-tagline {
+  margin-top: 0;
+}
+
+.tour-route-text p.tour-stops-heading {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: 1rem;
+}
+
+.tour-stops {
+  list-style: none;
+  counter-reset: stop;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tour-stops li {
+  counter-increment: stop;
+  position: relative;
+  padding-left: 2.4rem;
+  font-size: 0.94rem;
+  color: var(--color-gray);
+}
+
+.tour-stops li strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.tour-stops li::before {
+  content: counter(stop);
+  position: absolute;
+  left: 0;
+  top: -0.1rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: var(--color-ice-dark);
+  color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-closing {
+  font-style: italic;
+  color: var(--color-gray);
+}
+
+.tour-route-text p.tour-note {
+  margin-top: 1rem;
+  padding: 0.9rem 1.1rem;
+  background: rgba(203, 178, 138, 0.18);
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.tour-route-text p.tour-disclaimer {
+  margin-top: 1.2rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid #d8d3c8;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+.tour-route-text p.tour-disclaimer strong {
+  color: var(--color-ink);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-title--left {
+  text-align: left;
+}
+
+/* =========================================
+   7. SECCIONES GENERALES / SERVICIOS
+   ========================================= */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+.section-alt {
+  max-width: 100%;
+  background: var(--color-white);
+}
+
+.section-alt > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.6rem;
+  margin-top: 3rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-media {
+  aspect-ratio: 4 / 3;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-inner {
+  flex: 1;
+  padding: 1.8rem;
+  color: var(--color-white);
+  background: linear-gradient(160deg, #123043 0%, #1a3a4a 55%, #26495c 100%);
+}
+
+.card-inner h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+}
+
+.card-inner p {
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+
+/* =========================================
+   8. TESTIMONIOS
+   ========================================= */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.testimonial {
+  border-left: 2px solid var(--color-ice-dark);
+  padding-left: 1.5rem;
+}
+
+.testimonial p {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+}
+
+.testimonial-author {
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+}
+
+/* =========================================
+   9. NEWSLETTER / CTA OSCURO
+   ========================================= */
+.newsletter {
+  background: var(--color-ink);
+  color: var(--color-white);
+  text-align: center;
+  padding: 5.5rem 1.5rem;
+}
+
+.newsletter h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 0.8rem;
+}
+
+.newsletter p {
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 2rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: var(--color-white);
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+.newsletter-form input::placeholder {
+  color: rgba(255,255,255,0.55);
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--color-ice);
+}
+
+/* =========================================
+   10. FORMULARIO DE CONTACTO
+   ========================================= */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 3rem;
+  max-width: var(--max-width);
+  margin: 3rem auto 0;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.contact-info-item h3 {
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+  margin-bottom: 0.3rem;
+}
+
+.contact-info-item a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  transition: color var(--transition);
+}
+
+.contact-info-item a:hover {
+  color: var(--color-ice-dark);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-gray);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.85rem 1rem;
+  border: 1px solid #d8d3c8;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--color-cream);
+  transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-ice-dark);
+}
+
+.contact-form .btn-solid {
+  align-self: flex-start;
+}
+
+.form-feedback {
+  font-weight: 500;
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.form-feedback.success {
+  color: #2f7a4f;
+}
+
+.newsletter .form-feedback.success {
+  color: #9fd8b6;
+}
+
+.form-feedback.error {
+  color: #c0503f;
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.footer {
+  text-align: center;
+  padding: 2.2rem 1.5rem;
+  background: var(--color-ink);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================================
+   11b. BOTÓN FLOTANTE DE WHATSAPP
+   ========================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(14, 34, 48, 0.35);
+  z-index: 150;
+  transition: transform var(--transition);
+}
+
+.whatsapp-float::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  opacity: 0.55;
+  animation: whatsapp-pulse 2.2s ease-out infinite;
+  z-index: -1;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+/* =========================================
+   12. BOTÓN VOLVER ARRIBA
+   ========================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition);
+  box-shadow: 0 4px 14px rgba(14, 34, 48, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================================
+   13. ANIMACIÓN AL APARECER (SCROLL REVEAL)
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   14. RESPONSIVE / MOBILE
+   ========================================= */
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .tour-route {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .tour-route:nth-child(even) .tour-route-media,
+  .tour-route:nth-child(even) .tour-route-text {
+    order: initial;
+  }
+
+  .tour-route-media .carousel-slide {
+    height: 300px;
+  }
+
+  .tour-media-placeholder {
+    height: 300px;
+  }
+
+  .tour-media-photo {
+    height: 300px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 78%;
+    max-width: 320px;
+    background: var(--color-ink);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 2rem 2.4rem;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    color: var(--color-white) !important;
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    z-index: 101;
+  }
+
+}

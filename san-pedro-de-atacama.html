@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUCHILECL | San Pedro De Atacama</title>
+  <meta name="description" content="Tours guiados por San Pedro de Atacama, Chile: Valle de la Luna, géiseres del Tatio y el Salar de Atacama." />
+
+  <!-- Google Fonts: una serif editorial para titulares + una sans limpia para el resto (combo típico de sitios de turismo/lifestyle) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Nuestros estilos -->
+  <link rel="stylesheet" href="css/styles.css?v=15" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVEGACIÓN =====
+       Igual que en index.html; los enlaces del menú apuntan de vuelta a las secciones de la home. -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="index.html#inicio" class="logo">
+        <img src="images/logo.jpeg" alt="Logo TUCHILECL" class="logo-img" />
+        <span class="logo-text"><span class="logo-red">TU</span><span class="logo-blue">CHILE</span><span class="logo-adaptive">CL</span></span>
+      </a>
+
+      <div class="navbar-controls">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#inicio" data-i18n="nav.inicio">Inicio</a></li>
+          <li><a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a></li>
+          <li><a href="index.html#testimonios" data-i18n="nav.testimonios">Testimonios</a></li>
+          <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Selector de idioma -->
+        <div class="lang-switcher" id="langSwitcher">
+          <button type="button" class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <span aria-hidden="true">🌐</span>
+            <span id="langCurrentLabel">ES</span>
+            <span class="lang-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="menu">
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="es">Español</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="en">English</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="pt">Português</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="de">Deutsch</button></li>
+          </ul>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" data-i18n-aria-label="aria.openMenu" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO DEL DESTINO ===== -->
+  <section class="destino-hero">
+    <div class="destino-hero-media">
+      <img src="images/san-pedro-de-atacama/san-pedro-1.jpeg" alt="San Pedro de Atacama" />
+    </div>
+    <div class="destino-hero-overlay"></div>
+    <div class="destino-hero-content">
+      <a href="index.html#destinos" class="destino-back" data-i18n="patagoniaPage.back">← Volver a destinos</a>
+      <p class="eyebrow" data-i18n="sanpedroPage.eyebrow">San Pedro de Atacama · Desierto de Atacama</p>
+      <h1 data-i18n="sanpedroPage.title">San Pedro De Atacama</h1>
+    </div>
+  </section>
+
+  <!-- ===== DETALLE DE LA EXPERIENCIA ===== -->
+  <section class="section destino-detail">
+    <div class="destino-detail-intro">
+      <p class="eyebrow eyebrow-dark" data-i18n="sanpedroPage.introEyebrow">La experiencia</p>
+      <h2 class="section-title section-title--left" data-i18n="sanpedroPage.introTitle">El desierto más árido del mundo, con guía experto</h2>
+      <p data-i18n="sanpedroPage.introText">San Pedro de Atacama es la puerta de entrada a paisajes únicos: el Valle de la Luna, los géiseres del Tatio, lagunas altiplánicas y el Salar de Atacama. Todos nuestros tours son guiados por profesionales certificados que conocen el territorio, su historia y su cultura, para que vivas la experiencia con seguridad y el contexto que la hace inolvidable.</p>
+    </div>
+
+    <div class="destino-info-grid">
+      <div class="destino-info-card">
+        <span class="destino-info-icon" aria-hidden="true">🧭</span>
+        <h3 data-i18n="sanpedroPage.infoGuideTitle">Tours guiados</h3>
+        <p data-i18n="sanpedroPage.infoGuideText">Cada salida cuenta con un guía profesional certificado, que te acompaña durante todo el recorrido.</p>
+      </div>
+      <div class="destino-info-card">
+        <span class="destino-info-icon" aria-hidden="true">🏜️</span>
+        <h3 data-i18n="sanpedroPage.infoAttractionTitle">Principales atractivos</h3>
+        <p data-i18n="sanpedroPage.infoAttractionText">Valle de la Luna, géiseres del Tatio, Salar de Atacama y cielos estrellados únicos en el mundo.</p>
+      </div>
+      <div class="destino-info-card">
+        <span class="destino-info-icon" aria-hidden="true">📍</span>
+        <h3 data-i18n="sanpedroPage.infoMeetingTitle">Punto de encuentro</h3>
+        <p data-i18n="sanpedroPage.infoMeetingText">San Pedro de Atacama, Chile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOURS DETALLADOS (5 RUTAS) ===== -->
+  <section class="section section-alt tours-section">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="sanpedroPage.toursEyebrow">Excursiones guiadas</p>
+    <h2 class="section-title" data-i18n="sanpedroPage.toursTitle">Cinco rutas para explorar el desierto</h2>
+
+    <div class="tours-list">
+      <!-- 1. Valle del Arcoíris -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-arcoiris/valle-arcoiris-1.jpg" alt="Valle del Arcoíris 1" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-arcoiris/valle-arcoiris-2.jpg" alt="Valle del Arcoíris 2" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-arcoiris/valle-arcoiris-3.jpg" alt="Valle del Arcoíris 3" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-arcoiris/valle-arcoiris-4.jpg" alt="Valle del Arcoíris 4" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="sanpedroPage.route1.eyebrow">Ruta 1</p>
+          <h3 data-i18n="sanpedroPage.route1.title">Valle del Arcoíris</h3>
+          <p class="tour-altitude" data-i18n="sanpedroPage.route1.altitude">(3.600 m.s.n.m)</p>
+          <p class="tour-tagline" data-i18n="sanpedroPage.route1.tagline">Colores que solo el desierto puede crear</p>
+          <p data-i18n="sanpedroPage.route1.subtitle">Descubre una de las rutas más sorprendentes de Atacama, donde los minerales transformaron las montañas en una verdadera paleta de colores.</p>
+          <p class="tour-stops-heading" data-i18n="sanpedroPage.route1.stopsLabel">Paradas:</p>
+          <ol class="tour-stops">
+            <li><strong data-i18n="sanpedroPage.route1.stop1Name">Valle del Arcoíris</strong> – <span data-i18n="sanpedroPage.route1.stop1Text">Recorre montañas de tonos rojos, verdes, blancos, amarillos y grises.</span></li>
+            <li><strong data-i18n="sanpedroPage.route1.stop2Name">Yerbas Buenas</strong> – <span data-i18n="sanpedroPage.route1.stop2Text">Descubre antiguos petroglifos que cuentan parte de la historia de quienes habitaron y recorrieron este territorio.</span></li>
+            <li><strong data-i18n="sanpedroPage.route1.stop3Name">Cóctel y aperitivo</strong> – <span data-i18n="sanpedroPage.route1.stop3Text">Cierra la experiencia disfrutando del paisaje en un ambiente relajado.</span></li>
+          </ol>
+          <p class="tour-closing" data-i18n="sanpedroPage.route1.closing">Naturaleza, historia y fotografía en una sola experiencia.</p>
+        </div>
+      </article>
+
+      <!-- 2. Valle de la Luna -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-luna/valle-luna-1.jpg" alt="Valle de la Luna 1" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-luna/valle-luna-2.jpg" alt="Valle de la Luna 2" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-luna/valle-luna-3.jpg" alt="Valle de la Luna 3" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/valle-luna/valle-luna-4.jpg" alt="Valle de la Luna 4" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="sanpedroPage.route2.eyebrow">Ruta 2</p>
+          <h3 data-i18n="sanpedroPage.route2.title">Valle de la Luna</h3>
+          <p class="tour-tagline" data-i18n="sanpedroPage.route2.tagline">Un paisaje de otro planeta</p>
+          <p data-i18n="sanpedroPage.route2.subtitle">Adéntrate en la Cordillera de la Sal y descubre dunas, formaciones de sal y enormes paredes de roca moldeadas durante millones de años.</p>
+          <p class="tour-stops-heading" data-i18n="sanpedroPage.route2.stopsLabel">Paradas:</p>
+          <ol class="tour-stops">
+            <li><strong data-i18n="sanpedroPage.route2.stop1Name">Duna Mayor</strong> – <span data-i18n="sanpedroPage.route2.stop1Text">Camina por una de las dunas más impresionantes y disfruta de una vista panorámica.</span></li>
+            <li><strong data-i18n="sanpedroPage.route2.stop2Name">Las Tres Marías</strong> – <span data-i18n="sanpedroPage.route2.stop2Text">Una de las formaciones naturales más reconocidas del valle.</span></li>
+            <li><strong data-i18n="sanpedroPage.route2.stop3Name">El Anfiteatro</strong> – <span data-i18n="sanpedroPage.route2.stop3Text">Imponentes formaciones de roca y sal que parecen sacadas de otro mundo.</span></li>
+            <li><strong data-i18n="sanpedroPage.route2.stop4Name">Mirador para ver el atardecer</strong> – <span data-i18n="sanpedroPage.route2.stop4Text">El broche perfecto para contemplar cómo el desierto cambia de color.</span></li>
+            <li><strong data-i18n="sanpedroPage.route2.stop5Name">Cóctel en el desierto</strong> – <span data-i18n="sanpedroPage.route2.stop5Text">Termina la experiencia disfrutando de un cóctel mientras contemplas el impresionante atardecer.</span></li>
+          </ol>
+          <p class="tour-closing" data-i18n="sanpedroPage.route2.closing">Prepárate para sentir que viajaste a otro planeta sin salir de Chile.</p>
+          <p class="tour-note" data-i18n="sanpedroPage.route2.note">✨ Una experiencia imperdible para descubrir la belleza más extrema del desierto de Atacama.</p>
+          <p class="tour-disclaimer"><strong data-i18n="sanpedroPage.route2.disclaimerLabel">Importante:</strong> <span data-i18n="sanpedroPage.route2.disclaimerText">El itinerario y las paradas están sujetos a la disponibilidad y condiciones de los parques. Algunos sectores pueden presentar cierres temporales en determinados días. En caso de ser necesario, el recorrido se ajustará para ofrecer la mejor experiencia posible, manteniendo siempre el objetivo de que disfrutes y conozcas lo mejor de Atacama.</span></p>
+        </div>
+      </article>
+
+      <!-- 3. Laguna Cejar -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/cejar/cejar-1.jpg" alt="Laguna Cejar 1" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/cejar/cejar-2.jpg" alt="Laguna Cejar 2" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/cejar/cejar-3.jpg" alt="Laguna Cejar 3" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/cejar/cejar-4.jpg" alt="Laguna Cejar 4" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="sanpedroPage.route3.eyebrow">Ruta 3</p>
+          <h3 data-i18n="sanpedroPage.route3.title">Laguna Cejar</h3>
+          <p class="tour-tagline" data-i18n="sanpedroPage.route3.tagline">Flota en el corazón del Salar de Atacama</p>
+          <p data-i18n="sanpedroPage.route3.subtitle">Una experiencia que combina lagunas, sal, agua cristalina y uno de los paisajes más fotogénicos del desierto.</p>
+          <p class="tour-stops-heading" data-i18n="sanpedroPage.route3.stopsLabel">Paradas:</p>
+          <ol class="tour-stops">
+            <li><strong data-i18n="sanpedroPage.route3.stop1Name">Laguna Piedra</strong> – <span data-i18n="sanpedroPage.route3.stop1Text">Vive la experiencia de flotar en sus aguas de alta salinidad.</span></li>
+            <li><strong data-i18n="sanpedroPage.route3.stop2Name">Laguna Cejar</strong> – <span data-i18n="sanpedroPage.route3.stop2Text">Contempla sus aguas, las costras de sal y el paisaje dominado por los volcanes.</span></li>
+            <li><strong data-i18n="sanpedroPage.route3.stop3Name">Ojos del Salar</strong> – <span data-i18n="sanpedroPage.route3.stop3Text">Dos piscinas naturales de agua dulce en medio del desierto.</span></li>
+            <li><strong data-i18n="sanpedroPage.route3.stop4Name">Santuario de la Naturaleza Laguna Tebinquiche</strong> – <span data-i18n="sanpedroPage.route3.stop4Text">Disfruta del impresionante paisaje del salar, con información muy interesante sobre algo único que acontece en esa laguna.</span></li>
+            <li><strong data-i18n="sanpedroPage.route3.stop5Name">Cóctel y aperitivo</strong> – <span data-i18n="sanpedroPage.route3.stop5Text">Cierra la experiencia disfrutando del paisaje en un ambiente relajado.</span></li>
+          </ol>
+          <p class="tour-closing" data-i18n="sanpedroPage.route3.closing">Un tour para refrescarte, desconectarte y llevarte fotografías increíbles.</p>
+        </div>
+      </article>
+
+      <!-- 4. Géiseres del Tatio -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/tatio/tatio-1.jpg" alt="Géiseres del Tatio 1" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/tatio/tatio-2.jpg" alt="Géiseres del Tatio 2" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/tatio/tatio-3.jpg" alt="Géiseres del Tatio 3" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/tatio/tatio-4.jpg" alt="Géiseres del Tatio 4" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="sanpedroPage.route4.eyebrow">Ruta 4</p>
+          <h3 data-i18n="sanpedroPage.route4.title">Géiseres del Tatio</h3>
+          <p class="tour-tagline" data-i18n="sanpedroPage.route4.tagline">Donde la Tierra parece respirar</p>
+          <p data-i18n="sanpedroPage.route4.subtitle">Vive uno de los espectáculos naturales más impresionantes de Atacama al amanecer, entre vapor, volcanes y paisajes de altura.</p>
+          <p class="tour-stops-heading" data-i18n="sanpedroPage.route4.stopsLabel">Paradas:</p>
+          <ol class="tour-stops">
+            <li><strong data-i18n="sanpedroPage.route4.stop1Name">Campo Geotérmico del Tatio</strong> – <span data-i18n="sanpedroPage.route4.stop1Text">Contempla las fumarolas y géiseres al amanecer, a más de 4.300 msnm.</span></li>
+            <li><strong data-i18n="sanpedroPage.route4.stop2Name">Desayuno en el altiplano</strong> – <span data-i18n="sanpedroPage.route4.stop2Text">Disfruta una pausa rodeado de montañas y volcanes.</span></li>
+            <li><strong data-i18n="sanpedroPage.route4.stop3Name">Mirador del Volcán Putana</strong> – <span data-i18n="sanpedroPage.route4.stop3Text">Una postal espectacular del paisaje andino.</span></li>
+            <li><strong data-i18n="sanpedroPage.route4.stop4Name">Bofedal de Putana</strong> – <span data-i18n="sanpedroPage.route4.stop4Text">Observa la flora y fauna del altiplano; podrás encontrar vicuñas y flamencos.</span></li>
+            <li><strong data-i18n="sanpedroPage.route4.stop5Name">Pueblo de Machuca</strong> – <span data-i18n="sanpedroPage.route4.stop5Text">Conoce este tradicional poblado andino y su arquitectura de adobe.</span></li>
+          </ol>
+          <p class="tour-closing" data-i18n="sanpedroPage.route4.closing">Una experiencia para madrugar, sorprenderte y descubrir la fuerza de los Andes.</p>
+        </div>
+      </article>
+
+      <!-- 5. Tour Astronómico -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/astronomico/astronomico-1.jpg" alt="Tour Astronómico 1" /></div>
+              <div class="carousel-slide"><img src="images/san-pedro-de-atacama/tours/astronomico/astronomico-2.jpg" alt="Tour Astronómico 2" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="sanpedroPage.route5.eyebrow">Ruta 5</p>
+          <h3 data-i18n="sanpedroPage.route5.title">Tour Astronómico</h3>
+          <p class="tour-tagline" data-i18n="sanpedroPage.route5.tagline">El universo sobre tu cabeza</p>
+          <p data-i18n="sanpedroPage.route5.subtitle">Atacama es reconocido por sus excepcionales condiciones para observar el cielo nocturno. Esta noche, el desierto se convierte en tu propio observatorio.</p>
+          <p class="tour-stops-heading" data-i18n="sanpedroPage.route5.stopsLabel">Experiencia:</p>
+          <ol class="tour-stops">
+            <li><strong data-i18n="sanpedroPage.route5.stop1Name">Introducción al cielo atacameño</strong> – <span data-i18n="sanpedroPage.route5.stop1Text">Aprende a reconocer las maravillas que se esconden sobre nosotros.</span></li>
+            <li><strong data-i18n="sanpedroPage.route5.stop2Name">Observación a simple vista</strong> – <span data-i18n="sanpedroPage.route5.stop2Text">Descubre constelaciones, estrellas y fenómenos del cielo austral.</span></li>
+            <li><strong data-i18n="sanpedroPage.route5.stop3Name">Observación con telescopio</strong> – <span data-i18n="sanpedroPage.route5.stop3Text">Acércate a objetos celestes que no puedes apreciar a simple vista.</span></li>
+            <li><strong data-i18n="sanpedroPage.route5.stop4Name">Explicación astronómica</strong> – <span data-i18n="sanpedroPage.route5.stop4Text">Aprende de manera entretenida sobre el universo y sus misterios.</span></li>
+            <li><strong data-i18n="sanpedroPage.route5.stop5Name">Recuerdo de la experiencia</strong> – <span data-i18n="sanpedroPage.route5.stop5Text">Dependiendo del servicio contratado, podrás llevar fotografías de tu noche bajo las estrellas.</span></li>
+            <li><strong data-i18n="sanpedroPage.route5.stop6Name">Cóctel y aperitivo</strong> – <span data-i18n="sanpedroPage.route5.stop6Text">Cierra la experiencia disfrutando del paisaje en un ambiente relajado.</span></li>
+          </ol>
+          <p class="tour-closing" data-i18n="sanpedroPage.route5.closing">Una noche para mirar hacia arriba y entender por qué Atacama es famoso entre los amantes de las estrellas.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== MINI MAPA: SAN PEDRO DE ATACAMA ===== -->
+  <section class="section destino-map-section">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="sanpedroPage.mapEyebrow">Cómo llegar</p>
+    <h2 class="section-title" data-i18n="sanpedroPage.mapTitle">Nos encontramos en San Pedro de Atacama</h2>
+    <div class="destino-map">
+      <iframe
+        src="https://www.google.com/maps?q=San+Pedro+de+Atacama,+Chile&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Punto de encuentro - San Pedro de Atacama, Chile"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="newsletter destino-cta">
+    <h2 data-i18n="sanpedroPage.ctaTitle">¿Listo para vivir la experiencia?</h2>
+    <p data-i18n="sanpedroPage.ctaText">Cupos limitados por grupo. Escríbenos y te ayudamos a coordinar tu visita a San Pedro de Atacama.</p>
+    <a
+      class="btn btn-solid"
+      href="https://wa.me/56998341538?text=Hola%2C%20quiero%20consultar%20fechas%20disponibles%20para%20el%20tour%20a%20San%20Pedro%20de%20Atacama"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-i18n="patagoniaPage.ctaButton"
+    >Consultar fechas disponibles</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> TUCHILECL. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a
+    href="https://wa.me/56998341538?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tours%20de%20TUCHILECL"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-i18n-aria-label="aria.whatsapp"
+    aria-label="Chatea con nosotros por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.48L4 29l7.72-1.87A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.818c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.58 1.11 1.13-4.46-.25-.4A9.77 9.77 0 0 1 5.18 15c0-5.42 4.4-9.818 10.824-9.818 5.98 0 10.82 4.4 10.82 9.818 0 5.42-4.84 9.818-10.82 9.818Zm5.6-7.35c-.31-.15-1.82-.9-2.1-1-.28-.1-.49-.15-.69.15-.2.3-.79 1-.97 1.2-.18.2-.36.23-.67.08-.31-.15-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.12-.18-.3-.02-.47.13-.62.14-.14.31-.36.46-.54.15-.18.2-.3.31-.5.1-.2.05-.38-.02-.53-.08-.15-.69-1.67-.95-2.28-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.15 3.28 5.21 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.82-.74 2.08-1.46.26-.71.26-1.32.18-1.45-.08-.13-.28-.2-.59-.35Z"/>
+    </svg>
+  </a>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="back-to-top" data-i18n-aria-label="aria.backToTop" aria-label="Volver arriba">↑</button>
+
+  <!-- Sistema de idiomas (debe cargar antes que script.js) -->
+  <script src="js/i18n.js?v=19"></script>
+  <!-- Nuestro script -->
+  <script src="js/script.js?v=14"></script>
+</body>
+</html>

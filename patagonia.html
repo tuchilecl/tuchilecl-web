@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUCHILECL | Patagonia — Catedrales de Mármol</title>
+  <meta name="description" content="Tour en embarcación a las Catedrales de Mármol en Puerto Río Tranquilo, Patagonia chilena." />
+
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icono de la pestaña del navegador -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Nuestros estilos -->
+  <link rel="stylesheet" href="css/styles.css?v=15" />
+</head>
+<body>
+
+  <!--HEADER / NAVEGACIÓN-->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <a href="index.html#inicio" class="logo">
+        <img src="images/logo.jpeg" alt="Logo TUCHILECL" class="logo-img" />
+        <span class="logo-text"><span class="logo-red">TU</span><span class="logo-blue">CHILE</span><span class="logo-adaptive">CL</span></span>
+      </a>
+
+      <div class="navbar-controls">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#inicio" data-i18n="nav.inicio">Inicio</a></li>
+          <li><a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a></li>
+          <li><a href="index.html#testimonios" data-i18n="nav.testimonios">Testimonios</a></li>
+          <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+
+        <!-- Selector de idioma -->
+        <div class="lang-switcher" id="langSwitcher">
+          <button type="button" class="lang-toggle" id="langToggle" aria-haspopup="true" aria-expanded="false">
+            <span aria-hidden="true">🌐</span>
+            <span id="langCurrentLabel">ES</span>
+            <span class="lang-caret" aria-hidden="true">▾</span>
+          </button>
+          <ul class="lang-menu" id="langMenu" role="menu">
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="es">Español</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="en">English</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="pt">Português</button></li>
+            <li role="none"><button type="button" class="lang-option" role="menuitem" data-lang="de">Deutsch</button></li>
+          </ul>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" data-i18n-aria-label="aria.openMenu" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== HERO DEL DESTINO ===== -->
+  <section class="destino-hero">
+    <div class="destino-hero-media">
+      <img src="images/patagonia/patagonia-1.jpeg" alt="Catedrales de Mármol, Patagonia" />
+    </div>
+    <div class="destino-hero-overlay"></div>
+    <div class="destino-hero-content">
+      <a href="index.html#destinos" class="destino-back" data-i18n="patagoniaPage.back">← Volver a destinos</a>
+      <p class="eyebrow" data-i18n="patagoniaPage.eyebrow">Patagonia · Puerto Río Tranquilo</p>
+      <h1 data-i18n="patagoniaPage.title">Catedrales de Mármol</h1>
+    </div>
+  </section>
+
+  <!-- ===== DETALLE DE LA EXPERIENCIA ===== -->
+  <section class="section destino-detail">
+    <div class="destino-detail-intro">
+      <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.introEyebrow">La experiencia</p>
+      <h2 class="section-title section-title--left" data-i18n="patagoniaPage.introTitle">Navega entre esculturas de mármol milenario</h2>
+      <p data-i18n="patagoniaPage.introText">Las Catedrales de Mármol son la gran atracción de este tour: formaciones rocosas únicas, esculpidas durante miles de años por las aguas turquesa del Lago General Carrera. La navegación se realiza en embarcaciones con capacidad aproximada para 12 personas, acompañadas siempre de un guía que conoce cada rincón del santuario.</p>
+    </div>
+
+    <div class="destino-info-grid">
+      <div class="destino-info-card">
+        <span class="destino-info-icon" aria-hidden="true">🏛️</span>
+        <h3 data-i18n="patagoniaPage.infoAttractionTitle">Atracción principal</h3>
+        <p data-i18n="patagoniaPage.infoAttractionText">Las Catedrales de Mármol, formaciones esculpidas por el Lago General Carrera a lo largo de miles de años.</p>
+      </div>
+      <div class="destino-info-card">
+        <span class="destino-info-icon" aria-hidden="true">⛵</span>
+        <h3 data-i18n="patagoniaPage.infoBoatTitle">Embarcaciones</h3>
+        <p data-i18n="patagoniaPage.infoBoatText">Navegación en botes con capacidad aproximada para 12 personas, guiados por profesionales certificados.</p>
+      </div>
+      <div class="destino-info-card">
+        <span class="destino-info-icon" aria-hidden="true">📍</span>
+        <h3 data-i18n="patagoniaPage.infoMeetingTitle">Punto de encuentro</h3>
+        <p data-i18n="patagoniaPage.infoMeetingText">Puerto Río Tranquilo, Región de Aysén, Chile.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SELECTOR RÁPIDO: PUERTO TRANQUILO / PUERTO SÁNCHEZ ===== -->
+  <nav class="tours-nav" aria-label="Selector de tours">
+    <a href="#tours-puerto-tranquilo" class="tours-nav-btn">
+      <span class="tours-nav-icon" aria-hidden="true">🚤</span>
+      <span class="tours-nav-text">
+        <span class="tours-nav-label" data-i18n="patagoniaPage.navLabel">Tours desde</span>
+        <span class="tours-nav-title" data-i18n="patagoniaPage.navTranquiloTitle">Puerto Tranquilo</span>
+      </span>
+      <span class="tours-nav-arrow" aria-hidden="true">↓</span>
+    </a>
+    <a href="#tours-puerto-sanchez" class="tours-nav-btn">
+      <span class="tours-nav-icon" aria-hidden="true">🥾</span>
+      <span class="tours-nav-text">
+        <span class="tours-nav-label" data-i18n="patagoniaPage.navLabel">Tours desde</span>
+        <span class="tours-nav-title" data-i18n="patagoniaPage.navSanchezTitle">Puerto Sánchez</span>
+      </span>
+      <span class="tours-nav-arrow" aria-hidden="true">↓</span>
+    </a>
+  </nav>
+
+  <!-- ===== TOURS DISPONIBLES (2 TOURS) ===== -->
+  <section class="section section-alt tours-section" id="tours-puerto-tranquilo">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="patagoniaPage.toursEyebrow">Tours desde Puerto Tranquilo</p>
+    <h2 class="section-title" data-i18n="patagoniaPage.toursTitle">Elige tu aventura en el Lago General Carrera</h2>
+
+    <div class="tours-list">
+      <!-- 1. Capillas de Mármol -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-1.jpg" alt="Capillas de Mármol 1" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-2.jpg" alt="Capillas de Mármol 2" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-3.jpg" alt="Capillas de Mármol 3" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-4.jpg" alt="Capillas de Mármol 4" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-5.jpg" alt="Capillas de Mármol 5" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-6.jpg" alt="Capillas de Mármol 6" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-7.jpg" alt="Capillas de Mármol 7" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-8.jpg" alt="Capillas de Mármol 8" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-9.jpg" alt="Capillas de Mármol 9" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-10.jpg" alt="Capillas de Mármol 10" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-11.jpg" alt="Capillas de Mármol 11" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-12.jpg" alt="Capillas de Mármol 12" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-13.jpg" alt="Bosque de Mármol" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-14.jpg" alt="Cueva del Huemul" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/capillas-marmol/photos/capillas-marmol-15.jpg" alt="Patagonia, Lago General Carrera" /></div>
+              <div class="carousel-slide">
+                <video controls preload="metadata" playsinline poster="images/patagonia/tours/capillas-marmol/videos/capillas-marmol-video-1-poster.jpg">
+                  <source src="images/patagonia/tours/capillas-marmol/videos/capillas-marmol-video-1.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="carousel-slide">
+                <video controls preload="metadata" playsinline poster="images/patagonia/tours/capillas-marmol/videos/capillas-marmol-video-2-poster.jpg">
+                  <source src="images/patagonia/tours/capillas-marmol/videos/capillas-marmol-video-2.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="carousel-slide">
+                <video controls preload="metadata" playsinline poster="images/patagonia/tours/capillas-marmol/videos/capillas-marmol-video-3-poster.jpg">
+                  <source src="images/patagonia/tours/capillas-marmol/videos/capillas-marmol-video-3.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.tour1.eyebrow">Tour 1</p>
+          <h3 data-i18n="patagoniaPage.tour1.title">Santuario de la Naturaleza Capillas de Mármol</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.tour1.duration">(2 horas y media)</p>
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.tour1.includesLabel">El tour incluye:</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.tour1.item1">🚤 Navegación por el Lago General Carrera</li>
+            <li data-i18n="patagoniaPage.tour1.item2">🪨 Recorrido por las Capillas, Catedral y Cavernas de Mármol</li>
+            <li data-i18n="patagoniaPage.tour1.item3">📸 Tiempo para disfrutar y fotografiar el paisaje</li>
+            <li data-i18n="patagoniaPage.tour1.item4">🏔️ Vistas de la Patagonia y el Lago General Carrera</li>
+            <li data-i18n="patagoniaPage.tour1.item5">🧑‍✈️ Navegación con tripulación especializada</li>
+          </ul>
+          <p class="tour-note" data-i18n="patagoniaPage.tour1.note">✨ Una experiencia imperdible para conocer uno de los paisajes más increíbles de la Patagonia.</p>
+          <p class="tour-disclaimer" data-i18n="patagoniaPage.tour1.disclaimer">📌 Tour sujeto a condiciones climáticas y disponibilidad de navegación.</p>
+        </div>
+      </article>
+
+      <!-- 2. Glaciar San Rafael -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-1.jpg" alt="Glaciar San Rafael 1" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-2.jpg" alt="Glaciar San Rafael 2" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-3.jpg" alt="Glaciar San Rafael 3" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-4.jpg" alt="Glaciar San Rafael 4" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-5.jpg" alt="Glaciar San Rafael 5" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-6.jpg" alt="Glaciar San Rafael 6" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-7.jpg" alt="Glaciar San Rafael 7" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-8.jpg" alt="Glaciar San Rafael 8" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-9.jpg" alt="Glaciar San Rafael 9" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/glaciar-san-rafael/photos/glaciar-san-rafael-10.jpg" alt="Glaciar San Rafael 10" /></div>
+              <div class="carousel-slide">
+                <video controls preload="metadata" playsinline poster="images/patagonia/tours/glaciar-san-rafael/videos/glaciar-san-rafael-video-1-poster.jpg">
+                  <source src="images/patagonia/tours/glaciar-san-rafael/videos/glaciar-san-rafael-video-1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.tour2.eyebrow">Tour 2</p>
+          <h3 data-i18n="patagoniaPage.tour2.title">🧊 Glaciar San Rafael</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.tour2.duration">(Full day)</p>
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.tour2.includesLabel">El tour incluye:</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.tour2.item1">🚤 Navegación hacia el Glaciar San Rafael</li>
+            <li data-i18n="patagoniaPage.tour2.item2">🧊 Observación del glaciar y sus enormes bloques de hielo</li>
+            <li data-i18n="patagoniaPage.tour2.item3">🍽️ Comidas incluidas</li>
+            <li data-i18n="patagoniaPage.tour2.item4">📸 Tiempo para disfrutar y fotografiar el entorno</li>
+            <li data-i18n="patagoniaPage.tour2.item5">🧑‍✈️ Tripulación especializada durante la navegación</li>
+            <li data-i18n="patagoniaPage.tour2.item6">🥂 Brindis con hielo milenario incluido</li>
+          </ul>
+          <p class="tour-note" data-i18n="patagoniaPage.tour2.note">✨ Una experiencia única para acercarte a uno de los glaciares más impresionantes de la Patagonia chilena.</p>
+          <p class="tour-disclaimer" data-i18n="patagoniaPage.tour2.disclaimer">📌 Tour sujeto a condiciones climáticas y disponibilidad de navegación.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== TOURS DESDE PUERTO SÁNCHEZ (5 TOURS) ===== -->
+  <section class="section tours-section" id="tours-puerto-sanchez">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="patagoniaPage.psEyebrow">Desde Puerto Sánchez</p>
+    <h2 class="section-title" data-i18n="patagoniaPage.psTitle">Trekking, historia y kayak en el Lago General Carrera</h2>
+
+    <div class="tours-list">
+      <!-- PS1. Cerro Las Chivas -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/patagonia/tours/cerro-las-chivas/cerro-las-chivas-1.jpg" alt="Cerro Las Chivas 1" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/cerro-las-chivas/cerro-las-chivas-2.jpg" alt="Cerro Las Chivas 2" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/cerro-las-chivas/cerro-las-chivas-3.jpg" alt="Cerro Las Chivas 3" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.ps1.eyebrow">Tour 1</p>
+          <h3 data-i18n="patagoniaPage.ps1.title">🥾 Cerro Las Chivas</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.ps1.badge">(Trekking · Full Day)</p>
+          <p data-i18n="patagoniaPage.ps1.p1">Vive una jornada de aventura, naturaleza y trekking en Cerro Las Chivas. Recorre paisajes patagónicos, disfruta de impresionantes vistas desde la montaña y desafía tus límites acompañado por un guía certificado.</p>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.includesLabel">✨ ¿Qué incluye?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps1.inc1">🚐 Traslado hasta el faldeo del cerro</li>
+            <li data-i18n="patagoniaPage.ps1.inc2">🧭 Guía certificado con registro</li>
+            <li data-i18n="patagoniaPage.ps1.inc3">🥾 Equipo básico de trekking</li>
+            <li data-i18n="patagoniaPage.ps1.inc4">📸 Registro fotográfico</li>
+            <li data-i18n="patagoniaPage.ps1.inc5">🍫 Snack de marcha</li>
+            <li data-i18n="patagoniaPage.ps1.inc6">🩹 Botiquín y radios de comunicación</li>
+          </ul>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.bringLabel">🎒 ¿Qué debes llevar?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps1.bring1">Primera y segunda capa de abrigo</li>
+            <li data-i18n="patagoniaPage.ps1.bring2">Higiene personal</li>
+            <li data-i18n="patagoniaPage.ps1.bring3">Zapatos de trekking</li>
+            <li data-i18n="patagoniaPage.ps1.bring4">💧 1 a 2 litros de agua</li>
+            <li data-i18n="patagoniaPage.ps1.bring5">🍎 Alimentación extra</li>
+            <li data-i18n="patagoniaPage.ps1.bring6">🎒 Mochila de 20–30 litros</li>
+          </ul>
+
+          <p class="tour-note" data-i18n="patagoniaPage.ps1.closing">🔥 Un trekking pensado para quienes quieren salir de lo común, conectar con la naturaleza y vivir la Patagonia a otro nivel.</p>
+        </div>
+      </article>
+
+      <!-- PS2. Ruta del Minero - Puerto Cristal (día) -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/patagonia/tours/ruta-del-minero/ruta-minero-dia-1.jpg" alt="Ruta del Minero - Puerto Cristal 1" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/ruta-del-minero/ruta-minero-dia-2.jpg" alt="Ruta del Minero - Puerto Cristal 2" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/ruta-del-minero/ruta-minero-dia-3.jpg" alt="Ruta del Minero - Puerto Cristal 3" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.ps2.eyebrow">Tour 2</p>
+          <h3 data-i18n="patagoniaPage.ps2.title">⛏️ Ruta del Minero — Puerto Cristal</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.ps2.badge">(Trekking · Hiking All Day)</p>
+          <p data-i18n="patagoniaPage.ps2.p1">¿Te imaginas caminar por un antiguo pueblo minero escondido a orillas del Lago General Carrera? 🌊⛰️</p>
+          <p data-i18n="patagoniaPage.ps2.p2">Puerto Cristal es un lugar histórico de la Patagonia chilena, conocido por su pasado ligado a la minería de plomo y zinc. Durante décadas fue un pequeño asentamiento minero donde cientos de personas llegaron a trabajar y construir su vida en uno de los rincones más aislados de Aysén.</p>
+          <p data-i18n="patagoniaPage.ps2.p3">Hoy, sus antiguos caminos y vestigios permanecen como parte de un paisaje prácticamente detenido en el tiempo, rodeado de montañas, bosque patagónico y las increíbles aguas turquesas del Lago General Carrera.</p>
+          <p data-i18n="patagoniaPage.ps2.p4">🥾 En esta experiencia podrás llegar en lancha hasta Puerto Cristal y recorrer este patrimonio minero a través de una ruta de trekking, descubriendo su historia mientras disfrutas de vistas espectaculares de la Patagonia.</p>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.includesLabel">✨ ¿Qué incluye?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps2.inc1">🚤 Traslado en lancha hasta Puerto Cristal</li>
+            <li data-i18n="patagoniaPage.ps2.inc2">🧭 Guía certificado con registro</li>
+            <li data-i18n="patagoniaPage.ps2.inc3">🥾 Equipo básico de trekking</li>
+            <li data-i18n="patagoniaPage.ps2.inc4">⛰️ Tour guiado por Puerto Cristal</li>
+            <li data-i18n="patagoniaPage.ps2.inc5">🍫 Snack de recepción</li>
+          </ul>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.bringLabel">🎒 ¿Qué debes llevar?</p>
+          <p data-i18n="patagoniaPage.ps2.bring">Primera y segunda capa · higiene personal · mochila de 20–30 L · zapatos de trekking · 1–2 L de agua.</p>
+        </div>
+      </article>
+
+      <!-- PS3. Ruta del Minero - Trekking 2 días / 1 noche -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              <div class="carousel-slide"><img src="images/patagonia/tours/ruta-del-minero/ruta-minero-2dias-1.jpg" alt="Ruta del Minero - Trekking 2 días 1" /></div>
+              <div class="carousel-slide"><img src="images/patagonia/tours/ruta-del-minero/ruta-minero-2dias-2.jpg" alt="Alojamiento en Puerto Cristal" /></div>
+            </div>
+            <button type="button" class="carousel-btn carousel-btn--prev" data-i18n-aria-label="aria.prevPhoto" aria-label="Foto anterior">‹</button>
+            <button type="button" class="carousel-btn carousel-btn--next" data-i18n-aria-label="aria.nextPhoto" aria-label="Foto siguiente">›</button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.ps3.eyebrow">Tour 3</p>
+          <h3 data-i18n="patagoniaPage.ps3.title">🏔️ Ruta del Minero — Trekking 2 Días / 1 Noche</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.ps3.badge">(Trekking · 2 días / 1 noche)</p>
+          <p data-i18n="patagoniaPage.ps3.p1">Vive una experiencia única en la Patagonia recorriendo la antigua huella minera entre Puerto Sánchez y Puerto Cristal. 🌲🥾 Durante dos días descubrirás paisajes increíbles, historia y naturaleza, con una noche de alojamiento en Puerto Cristal.</p>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.includesLabel">✨ ¿Qué incluye?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps3.inc1">🚤 Lancha de acercamiento</li>
+            <li data-i18n="patagoniaPage.ps3.inc2">🥾 Guía certificado + equipo básico de trekking</li>
+            <li data-i18n="patagoniaPage.ps3.inc3">🏘️ Tour guiado en Puerto Cristal</li>
+            <li data-i18n="patagoniaPage.ps3.inc4">🏡 Alojamiento</li>
+            <li data-i18n="patagoniaPage.ps3.inc5">🥪 Snack de recepción</li>
+          </ul>
+
+          <p class="tour-disclaimer" data-i18n="patagoniaPage.ps3.warning">⚠️ Alimentación no incluida.</p>
+          <p class="tour-closing" data-i18n="patagoniaPage.ps3.closing">Dos días para desconectarte, caminar y descubrir una Patagonia llena de historia. 🏔️✨</p>
+        </div>
+      </article>
+
+      <!-- PS4. Kayak Puerto Cristal - 1 día -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="tour-media-photo">
+            <img src="images/patagonia/tours/kayak/kayak-1.jpg" alt="Kayak en Puerto Cristal" />
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.ps4.eyebrow">Tour 4</p>
+          <h3 data-i18n="patagoniaPage.ps4.title">🛶 Kayak en Puerto Cristal</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.ps4.badge">(Kayak · 1 día)</p>
+          <p data-i18n="patagoniaPage.ps4.p1">Rema por las aguas del Lago General Carrera y descubre Puerto Cristal desde una perspectiva única. 🌊⛰️</p>
+          <p data-i18n="patagoniaPage.ps4.p2">Esta experiencia combina aventura, naturaleza e historia en uno de los rincones más fascinantes de la Patagonia. Navega en kayak rodeado de montañas, aguas cristalinas y paisajes increíbles, mientras conoces Puerto Cristal y su historia minera acompañado por un guía especializado.</p>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.includesLabel">✨ ¿Qué incluye?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps4.inc1">🚤 Transporte en lancha</li>
+            <li data-i18n="patagoniaPage.ps4.inc2">🛶 Equipo completo de kayak</li>
+            <li data-i18n="patagoniaPage.ps4.inc3">🧭 Guía con registro</li>
+            <li data-i18n="patagoniaPage.ps4.inc4">🏘️ Tour por Puerto Cristal</li>
+            <li data-i18n="patagoniaPage.ps4.inc5">🍫 Snack de marcha</li>
+            <li data-i18n="patagoniaPage.ps4.inc6">📻 WFR + botiquín</li>
+          </ul>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.bringLabel">🎒 ¿Qué debes llevar?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps4.bring1">💧 Botella de agua</li>
+            <li data-i18n="patagoniaPage.ps4.bring2">🕶️ Lentes de sol</li>
+            <li data-i18n="patagoniaPage.ps4.bring3">🧥 Primera capa</li>
+            <li data-i18n="patagoniaPage.ps4.bring4">🌬️ Cortavientos</li>
+          </ul>
+
+          <p class="tour-note" data-i18n="patagoniaPage.ps4.closing">🌄 Una aventura para sentir la Patagonia de verdad: agua, montaña, historia y adrenalina en una sola experiencia. 🛶✨</p>
+        </div>
+      </article>
+
+      <!-- PS5. Kayak 2 días / 1 noche -->
+      <article class="tour-route">
+        <div class="tour-route-media">
+          <div class="tour-media-photo">
+            <img src="images/patagonia/tours/kayak/kayak-1.jpg" alt="Kayak 2 días en Puerto Cristal" />
+          </div>
+        </div>
+        <div class="tour-route-text">
+          <p class="eyebrow eyebrow-dark" data-i18n="patagoniaPage.ps5.eyebrow">Tour 5</p>
+          <h3 data-i18n="patagoniaPage.ps5.title">🛶 Kayak 2 Días / 1 Noche — Puerto Cristal</h3>
+          <p class="tour-altitude" data-i18n="patagoniaPage.ps5.badge">(Kayak · 2 días / 1 noche)</p>
+          <p data-i18n="patagoniaPage.ps5.p1">Una aventura única por el Lago General Carrera, combinando kayak, naturaleza e historia en el corazón de la Patagonia. 🌊⛰️</p>
+          <p data-i18n="patagoniaPage.ps5.p2">La travesía comienza en Puerto Sánchez, donde nos embarcamos para adentrarnos en las aguas del Lago General Carrera hasta llegar a Puerto Cristal, un antiguo asentamiento minero conocido como el "Humberstone de la Patagonia".</p>
+          <p data-i18n="patagoniaPage.ps5.p3">Durante el recorrido podrás remar por antiguas rutas de navegación, rodearte de imponentes montañas y descubrir la historia de este pueblo que conserva vestigios de su pasado minero.</p>
+          <p><strong data-i18n="patagoniaPage.ps5.day1Label">🏔️ Día 1:</strong> <span data-i18n="patagoniaPage.ps5.day1Text">navegación desde Puerto Sánchez, travesía en kayak y llegada a Puerto Cristal. Realizaremos un tour guiado por sus antiguas habitaciones y dependencias, conociendo cómo era la vida de quienes habitaron este remoto lugar. Luego, descansaremos y pasaremos la noche en el pueblo histórico.</span></p>
+          <p><strong data-i18n="patagoniaPage.ps5.day2Label">🌅 Día 2:</strong> <span data-i18n="patagoniaPage.ps5.day2Text">después de disfrutar de Puerto Cristal, emprendemos el regreso en kayak hacia Puerto Sánchez, cerrando una experiencia inolvidable entre las montañas y las aguas del Lago General Carrera.</span></p>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.includesLabel">✨ ¿Qué incluye?</p>
+          <ul class="tour-highlights">
+            <li data-i18n="patagoniaPage.ps5.inc1">🚤 Transporte en lancha (opcional)</li>
+            <li data-i18n="patagoniaPage.ps5.inc2">🛶 Equipo completo de kayak</li>
+            <li data-i18n="patagoniaPage.ps5.inc3">🧭 Guía con registro</li>
+            <li data-i18n="patagoniaPage.ps5.inc4">🏘️ Tour guiado por Puerto Cristal</li>
+            <li data-i18n="patagoniaPage.ps5.inc5">🥾 Snack de marcha</li>
+            <li data-i18n="patagoniaPage.ps5.inc6">🩹 WFR y botiquín</li>
+            <li data-i18n="patagoniaPage.ps5.inc7">🏡 Hospedaje</li>
+          </ul>
+
+          <p class="tour-stops-heading" data-i18n="patagoniaPage.bringLabel">🎒 ¿Qué debes llevar?</p>
+          <p data-i18n="patagoniaPage.ps5.bring">Botella de agua, lentes de sol, primeras capas, cortavientos, ropa de cambio y toalla.</p>
+
+          <p class="tour-disclaimer" data-i18n="patagoniaPage.ps5.warning">⚠️ Importante: si se solicita la lancha de rescate, se agregan $50.000 por persona. La lancha funciona como respaldo ante condiciones adversas o si los participantes no pueden remar de regreso.</p>
+          <p class="tour-closing" data-i18n="patagoniaPage.ps5.closing">Dos días para desconectarte, remar, descubrir la historia de la Patagonia y vivir Puerto Cristal de una manera que pocos tienen la oportunidad de experimentar. 🛶✨</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== MINI MAPA: PUNTO DE ENCUENTRO ===== -->
+  <section class="section section-alt destino-map-section">
+    <p class="eyebrow eyebrow-dark" style="text-align:center;" data-i18n="patagoniaPage.mapEyebrow">Cómo llegar</p>
+    <h2 class="section-title" data-i18n="patagoniaPage.mapTitle">Nos encontramos en Puerto Río Tranquilo</h2>
+    <div class="destino-map">
+      <iframe
+        src="https://www.google.com/maps?q=Puerto+R%C3%ADo+Tranquilo,+Chile&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Punto de encuentro - Puerto Río Tranquilo"
+      ></iframe>
+    </div>
+  </section>
+
+  <section class="newsletter destino-cta">
+    <h2 data-i18n="patagoniaPage.ctaTitle">¿Listo para vivir la experiencia?</h2>
+    <p data-i18n="patagoniaPage.ctaText">Cupos limitados por embarcación. Escríbenos y te ayudamos a coordinar tu visita a las Catedrales de Mármol.</p>
+    <a
+      class="btn btn-solid"
+      href="https://wa.me/56998341538?text=Hola%2C%20quiero%20consultar%20fechas%20disponibles%20para%20el%20tour%20a%20las%20Catedrales%20de%20M%C3%A1rmol%20en%20Patagonia"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-i18n="patagoniaPage.ctaButton"
+    >Consultar fechas disponibles</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> TUCHILECL. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a
+    href="https://wa.me/56998341538?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tours%20de%20TUCHILECL"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-i18n-aria-label="aria.whatsapp"
+    aria-label="Chatea con nosotros por WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true">
+      <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.48L4 29l7.72-1.87A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3Zm0 21.818c-1.94 0-3.75-.55-5.29-1.5l-.38-.23-4.58 1.11 1.13-4.46-.25-.4A9.77 9.77 0 0 1 5.18 15c0-5.42 4.4-9.818 10.824-9.818 5.98 0 10.82 4.4 10.82 9.818 0 5.42-4.84 9.818-10.82 9.818Zm5.6-7.35c-.31-.15-1.82-.9-2.1-1-.28-.1-.49-.15-.69.15-.2.3-.79 1-.97 1.2-.18.2-.36.23-.67.08-.31-.15-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.12-.18-.3-.02-.47.13-.62.14-.14.31-.36.46-.54.15-.18.2-.3.31-.5.1-.2.05-.38-.02-.53-.08-.15-.69-1.67-.95-2.28-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.81.38-.28.3-1.06 1.04-1.06 2.53s1.09 2.93 1.24 3.13c.15.2 2.15 3.28 5.21 4.6.73.31 1.3.5 1.74.64.73.23 1.4.2 1.93.12.59-.09 1.82-.74 2.08-1.46.26-.71.26-1.32.18-1.45-.08-.13-.28-.2-.59-.35Z"/>
+    </svg>
+  </a>
+
+  <!-- Botón volver arriba -->
+  <button id="backToTop" class="back-to-top" data-i18n-aria-label="aria.backToTop" aria-label="Volver arriba">↑</button>
+
+  <!-- Sistema de idiomas (debe cargar antes que script.js) -->
+  <script src="js/i18n.js?v=19"></script>
+  <!-- Nuestro script -->
+  <script src="js/script.js?v=14"></script>
+</body>
+</html>
