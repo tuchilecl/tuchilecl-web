@@ -1480,6 +1480,8 @@ h1, h2, h3 {
     top: 0;
     right: 0;
     bottom: 0;
+    height: 100vh;
+    height: 100dvh;
     width: 78%;
     max-width: 320px;
     background: var(--color-ink);
